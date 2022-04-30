@@ -1,0 +1,50 @@
+html{
+    background-color: rgb(243, 243, 243)
+}
+
+#infos{
+    background-color: rgb(212, 212, 212);
+    margin-right: 3%;
+}  
+
+.font-correct{
+    font-size: 70%;
+}
+
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+.right-allign{
+    float: right;
+    padding: 20px;
+}
+
+.left-allign{
+    float: left;
+    padding: 20px;
+}
+
+.column{
+    float: left;
+    padding: 10px;
+  }
+
+.row{
+    display: flex;
+}
+
+.curve{
+    border-radius: 100%;
+}
+
+.curve-little{
+    border-radius: 10%;
+}
+
+.txt-allign{
+    text-align: center;
+}
