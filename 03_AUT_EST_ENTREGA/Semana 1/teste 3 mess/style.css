@@ -1,0 +1,19 @@
+body{
+    background-color: brown;
+}
+
+h1{
+    text-align: center;
+}
+
+#txt{
+    margin-top: 50px;
+    padding-left: 35%;
+}
+
+button{
+    margin-left: 20%;
+    background-color: rgb(194, 87, 87);
+    border-style: groove;
+}
+
