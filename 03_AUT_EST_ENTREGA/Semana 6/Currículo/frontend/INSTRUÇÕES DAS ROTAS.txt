@@ -1,0 +1,25 @@
+                Métodos e rotas
+*Método get
+/acessos
+
+*Método post
+/adicionaracesso (também pode ser utilizado pelo form no rodapé
+da página)
+{ 
+  "name": "text"
+  "date": int(diaMÊS)
+}
+
+*Método delete
+/deletaracesso
+{ 
+  "id": int
+}
+
+*Método patch
+/atualizaracesso
+{ 
+  "id": int (linha a ser modificada)
+  "name": "text"
+  "date": int(diaMÊS)
+}
