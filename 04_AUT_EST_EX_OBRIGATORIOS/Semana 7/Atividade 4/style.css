@@ -1,0 +1,49 @@
+#geral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+button{
+    width: 7%;
+}
+
+body{
+    background-color: rgb(163, 121, 222);
+}
+
+p{
+    word-wrap: break-all;
+}
+
+#input1{
+    width: 21%;
+}
+
+input[name="horario"]{
+    width: 7%;
+    padding-bottom: 100%;
+}
+
+footer{
+    position: absolute;
+    margin-top: 80%;
+}
+
+footer:hover{
+    color: red;
+}
+
+img{
+    position: absolute;
+    padding-left: 22%;
+    padding-bottom: 276px;
+    height: 20px;
+    z-index: -1;
+}

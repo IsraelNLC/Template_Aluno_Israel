@@ -24,9 +24,9 @@ function getOp(){
                 return a % b
             }
     }
-    console.log("Resposta " + operação(Number(number1.value), Number(number2.value)))
-    var ans = operação(Number(number1.value), Number(number2.value))
-    calculate("O resultado é: " + ans);
+    //console.log("Resposta " + operação(Number(number1.value), Number(number2.value)))
+    var ans = operação(Number(number1.value), Number(number2.value)); //answer
+    insertScreen("O resultado é: " + ans);
     }
       document.getElementById('+').onclick = onClick;
       document.getElementById('-').onclick = onClick;
@@ -37,8 +37,8 @@ function getOp(){
       
 }
 
-function calculate(x){
-    const result = document.getElementById("resultp")
+function insertScreen(x){
+    const result = document.getElementById("resultp");
     result.innerHTML = x
 }
 

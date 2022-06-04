@@ -1,0 +1,27 @@
+#geral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+button{
+    width: 7%;
+}
+
+html{
+    background-color: aquamarine;
+}
+
+p{
+    word-wrap: break-all;
+}
+
+input{
+    width: 13.3%;
+}

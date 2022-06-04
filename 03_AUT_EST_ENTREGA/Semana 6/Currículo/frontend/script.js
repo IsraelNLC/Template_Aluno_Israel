@@ -12,14 +12,14 @@ print(texts);
 
 function darkMode(){
     if(clickDark === false){
-        $("p, h2, h1").css("color", "white");
-        $("html").css("background-color", "black");
-        $("#infos h2, #infos p").css("color", "black");
+        $("p, h3, h2, h1, th, td").css("color", "white"); //Altera os textos
+        $("html").css("background-color", "black"); //Altera o bckg
+        $("#infos h2, #infos p").css("color", "black"); //Reverte os txt do info
         clickDark = true;
     }
     else{
         $("html").css("background-color", cinzinha);
-        $("p, h2, h1").css("color", "black");
+        $("p, h3, h2, h1, th, td").css("color", "black");
         clickDark = false;
     }
 

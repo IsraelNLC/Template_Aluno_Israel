@@ -26,3 +26,9 @@ footer{
     margin-top: 28%;
     margin-left: 40%;
 }
+
+.centralizer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

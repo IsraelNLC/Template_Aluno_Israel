@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="geral">
+        <table>
+            <tr>
+                <td>
+                    <H1>Produtos</H1>
+                </td>
+            </tr>
+            <tr>
+                <td><input oninput="inputado()" id="numero" type="number"></td>
+            </tr>
+            <tr>
+                <td><button onclick="aumenta()" >↑</button><button onclick="diminui()" >↓</button></td>
+            </tr>
+            <tr>
+                <td><p id="resultado" >Quantidade selecionada: null</p></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>
