@@ -1,0 +1,89 @@
+:root{
+    --cinzinha: rgb(243, 243, 243);
+} 
+
+html{
+    background-color: var(--cinzinha);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+#infos{
+    background-color: rgb(212, 212, 212);
+    margin-right: 3%;
+    border-radius: 10%;
+}  
+/* 
+#resumo{
+    background-color: rgba(202, 202, 202, 0.342);
+} */
+
+.font-correct{
+    font-size: 70%;
+}
+
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+.right-allign{
+    float: right;
+    padding: 20px;
+}
+
+.left-allign{
+    float: left;
+    padding: 20px;
+}
+
+.column{
+    float: left;
+    padding: 10px;
+}
+
+.row{
+    display: flex;
+}
+
+.curve{
+    border-radius: 100%;
+}
+
+.curve-little{
+    border-radius: 50%;
+}
+
+.txt-allign{
+    text-align: center;
+}
+
+#lua{
+    margin-left: 95%;
+    position: absolute;
+}
+
+.tabelinha{
+    position: relative;
+    text-align: center;
+    padding-left: 46%;
+}
+/* .tabelinha tr{
+
+} */
+
+.tabelinha td{
+    width: auto;
+    border: 1.5px;
+    border-color: rgb(75, 75, 75);
+    border-style: groove;
+} 
+
+/* .tabelinha tr:hover{
+    background-color: rgb(165, 28, 28);
+} */

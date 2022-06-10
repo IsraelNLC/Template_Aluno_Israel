@@ -15,7 +15,6 @@ function aumenta(){
     numero.value = numerx
     resultado.innerHTML = "Quantidade selecionada: " + numerx
     // numero.value += 1  POR QUE ESSA LINHA NÃO FUNCIONA PRA ADICIONAR????
-    // resultado.innerHTML = numero.value
 }
 
 function diminui(){
