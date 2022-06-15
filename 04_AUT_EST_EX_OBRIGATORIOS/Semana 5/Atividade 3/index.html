@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        #foco {
+            width: 135px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Ordenador</h1>
+    </div>
+    <div>
+        <label>Insira um array de números</label>
+        <input type="text" name="array" id="array" placeholder="[1,2,3,4,5,6,7,8,9,10]">
+        <label>e</label>
+        <input type="number" id="foco" placeholder="Insira seu valor foco">
+        <input type="submit" value="Enviar" onclick="ordenar()">
+    </div>
+    <div>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function ordenar() {
+            const foco = Number(document.getElementById("foco").value);
+            const resultado = document.getElementById("resultado");
+            var array = document.getElementById("array").value;
+            array = array.replace(/[\[\]']+/g, '');
+            array = array.split(',');
+            array = array.map(Number);
+            array = array.sort(function(a, b){return a - b});
+            var posicao = findPosition(array, foco);
+            array = array.join(',');
+            resultado.innerHTML = "O array ordenado é: '" + array + "'";
+            if(posicao == -1) {
+                resultado.innerHTML += " e o valor-foco não está na lista.";
+            } else {
+                resultado.innerHTML += " e o valor-foco está na posição " + (posicao + 1) + ".";
+            }
+        }
+        function findPosition(array, foco) {
+            let pos = array.indexOf(foco);
+            console.log(pos)
+            return pos;
+        }
+
+    </script>
+</body>
+</html>

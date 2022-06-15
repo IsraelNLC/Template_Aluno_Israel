@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculador de Notas PLUS</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        button{
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100px;
+        }
+        input{
+            width: 100px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 5px 10px;  
+            background-color: blanchedalmond;
+        }
+        p{
+            font-size: 20px;
+            background-color: #4CAF50;
+            margin-right: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Sistema de pagamento</h1>
+    </div>
+    <div>
+            <input type="number" id="valor" placeholder="Valor">
+            <button type="submit" onclick="envia();">Pagar</button>
+    </div>
+    <div>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function envia(){
+            // pega o valor do input
+            const valor = document.getElementById("valor").value;
+            const resultado = document.getElementById("resultado");
+            //calcula as notas necessárias
+            //checa os restos e divide pelo valor da nota
+            const notas100 = Math.floor(valor/100);
+            const notas50 = Math.floor((valor%100)/50);
+            const notas20 = Math.floor(((valor%100)%50)/20);
+            const notas10 = Math.floor((((valor%100)%50)%20)/10);
+            const notas5 = Math.floor(((((valor%100)%50)%20)%10)/5);
+            const notas2 = Math.floor((((((valor%100)%50)%20)%10)%5)/2);
+            const notas1 = Math.floor(((((((valor%100)%50)%20)%10)%5)%2)/1);
+            //mostra o resultado
+            resultado.innerHTML = "Notas de 100: " + notas100 + "<br>Notas de 50: " + notas50 + "<br>Notas de 20: " + notas20 + "<br>Notas de 10: " + notas10 + "<br>Notas de 5: " + notas5 + "<br>Notas de 2: " + notas2 + "<br>Notas de 1: " + notas1;
+            //limpa o input
+            document.getElementById("valor").value = "";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

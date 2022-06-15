@@ -95,9 +95,6 @@ function enviaAcesso(){
             }
         )
     });
-    
-    getEmpPage();
-
 }
 
 // Delete por ajax
