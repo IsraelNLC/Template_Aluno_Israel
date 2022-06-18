@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de intervalo primos</title>
+    <style>
+        button:hover{
+            background-color: #58ecff32;
+            color: #000;
+        }
+        body{
+            background-color: #c3d461;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        button{
+            background-color: #7e9c2298;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #58ecff32;
+            color: #000;
+        }
+        input{
+            width: 225px;
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin-left: 10px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerador de intervalo primos</h1>
+    </header>
+    <div id="inputs">
+        <form action="" id="form">
+        <label>Insira o número inicial</label>
+        <input id="number1" placeholder="Insert number n1" id="number" required>
+        <label>Insira o número final</label>
+        <input id="number2" placeholder="Insert number n2" id="number" required>
+        <button id="button" type="subtmit">Gerar</button>
+        </form>
+    </div>
+    <div id="result">
+        <p id="result-text"></p>
+    </div>
+    <script>
+        const button = document.getElementById('button');
+        const number1 = document.getElementById('number1');
+        const number2 = document.getElementById('number2');
+        const result = document.getElementById('result-text');
+        const form = document.getElementById('form');
+        form.onsubmit = () => {
+            if(number1.value > number2.value || Number(number1.value) < 0 || Number(number2.value) < 0 || !Number.isInteger(Number(number1.value)) || !Number.isInteger(Number(number2.value))){
+                result.innerHTML = "O número inicial não pode ser maior que o número final, e eles devem ser números naturais";
+            }
+            else{
+            let allNumbers = []
+            let size = Number(number2.value) - Number(number1.value)
+            allNumbers.push(Number(number1.value))
+            let firstNum = Number(number1.value)
+            for(let i = 0; i < size ; i++){
+                firstNum += 1
+                allNumbers.push(firstNum)
+            }
+            let primeNumbers = []
+            for(let i = 0; i < allNumbers.length; i++){
+                let isPrime = false
+                if(allNumbers[i] == 2){
+                    primeNumbers.push(allNumbers[i])
+                    console.log(allNumbers[i] + " sou primo 1") 
+                }
+                else{
+                    for(let j = 2; j < allNumbers[i]; j++){
+                        if(allNumbers[i] % j != 0){
+                            isPrime = true
+                        }
+                        else{
+                            isPrime = false
+                            break
+                        }
+                    }
+                    if(isPrime == true){
+                        primeNumbers.push(allNumbers[i])
+                        console.log(allNumbers[i] + " sou primo 2")
+                    }
+                    else{
+                        console.log(allNumbers[i] + " não sou primo 2")
+                    }
+                }                                
+            }
+            result.innerHTML = "Para o intervalo de " + number1.value + " a " + number2.value + " temos os seguintes números primos: " + primeNumbers.join(", ")
+        }
+        return false
+        }
+    </script>
+</body>
+</html>

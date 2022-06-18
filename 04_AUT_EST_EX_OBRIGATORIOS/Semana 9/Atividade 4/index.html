@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+    <style>
+        button:hover{
+            background-color: #58ecff32;
+            color: #000;
+        }
+        body{
+            background-color: #c3d461;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        button{
+            background-color: #7e9c2298;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #58ecff32;
+            color: #000;
+        }
+        input{
+            width: 225px;
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin-left: 10px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sequência de Fibonacci</h1>
+    </header>
+    <div id="inputs">
+        <label>Insira a quantidade de números para a sequência</label>
+        <input type="number" placeholder="Insert number" id="number">
+        <button id="button">Gerar</button>
+    </div>
+    <div id="result">
+        <p id="result-text"></p>
+    </div>
+    <script>
+        const numero = document.getElementById("number");
+        const botao = document.getElementById("button");
+        const resultado = document.getElementById("result-text");
+        botao.onclick = () => {
+            if(Number(numero.value) > 0 && Number.isInteger(Number(numero.value))){
+            var contagem = [1]
+            if(Number(numero.value) > 1){
+                contagem.push(1)
+            }
+            for(let i = 1; i < Number(numero.value) - 1; i++){
+                newNumber = contagem[i] + contagem[i-1]
+                contagem.push(newNumber)
+            }
+            resultado.innerHTML = contagem.join(", ")
+            }
+            else{
+                resultado.innerHTML = "Insira um número inteiro positivo"
+            }
+        }
+    </script>
+</body>
+</html>
